@@ -14,7 +14,7 @@ db_conn = psycopg2.connect(
     user="user",
     password="password",
     host="db",
-    port="5432"
+    port="5432"  #default postgresql port
 )
 cursor = db_conn.cursor()
 

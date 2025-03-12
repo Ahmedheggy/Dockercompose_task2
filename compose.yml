@@ -8,23 +8,24 @@ services:
     depends_on:
       - db
       - redis
+      #Constructs a PostgreSQL connection string dynamically using variables from the .env file.
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
-      REDIS_HOST: ${REDIS_HOST}
+      REDIS_HOST: ${REDIS_HOST}     #define redis hostname
     env_file:
-      - .env  # Load environment variables
+      - .env       # Load environment variables
 
   db:
     image: postgres:latest
-    restart: always
+    restart: always       #if container stops or crashes, Docker will automatically restart it.
     env_file:
       - .env
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data    #directory inside the Postgresql container where data is stored.
 
   redis:
     image: redis:latest
     restart: always
 
 volumes:
-  db_data:
+  db_data:      #declaration of db_data to be used in Postgresql container
