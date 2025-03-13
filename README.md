@@ -29,10 +29,10 @@ Build & Start Containers:
 docker-compose up --build -d
 
 Access the Web App:
-Open in browser: http://localhost:8000
+Open in browser: http://localhost:8000 or curl http://localhost:8000
 
 Check Database (Inside Container):
-docker exec -it docker_project2-db-1 psql -U user -d mydatabase
+docker exec -it docker_task3-db-1 psql -U user -d mydatabase
 
 List tables: \dt
 
