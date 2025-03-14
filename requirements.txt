@@ -1,12 +1,3 @@
-# requirements.txt  
-# This file lists all the dependencies required to run the Flask application.  
-# Install them using: pip install -r requirements.txt  
-
-# Flask: Lightweight web framework for building APIs and web applications  
-flask  
-
-# Redis: In-memory data store used for caching wave counts  
-redis  
-
-# psycopg2-binary: PostgreSQL adapter for Python to connect to the database  
-psycopg2-binary  
+flask
+redis
+psycopg2-binary
